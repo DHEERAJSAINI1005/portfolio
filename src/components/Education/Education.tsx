@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import ScrollAnimation from "react-animate-on-scroll";
+import { Fade } from "react-awesome-reveal";
 import kukLogo from "../../assets/kuklogo.png";
 
 export function Education() {
@@ -7,7 +7,7 @@ export function Education() {
     <Container id="education">
       <h2 className="section-title">🎓 My Education</h2>
 
-      <ScrollAnimation animateIn="fadeInUp" duration={1} animateOnce>
+      <Fade direction="up" duration={1000} triggerOnce>
         <div className="education-item">
           <img src={kukLogo} alt="KUK Logo" className="edu-logo" />
           <div className="edu-details">
@@ -15,9 +15,9 @@ export function Education() {
             <p>Kurukshetra University (KUK)</p>
           </div>
         </div>
-      </ScrollAnimation>
+      </Fade>
 
-      <ScrollAnimation animateIn="fadeInUp" duration={1} delay={200} animateOnce>
+      <Fade direction="up" duration={1000} delay={200} triggerOnce>
         <div className="education-item">
           <img src={kukLogo} alt="KUK Logo" className="edu-logo" />
           <div className="edu-details">
@@ -25,7 +25,7 @@ export function Education() {
             <p>Kurukshetra University (KUK)</p>
           </div>
         </div>
-      </ScrollAnimation>
+      </Fade>
     </Container>
   );
 }

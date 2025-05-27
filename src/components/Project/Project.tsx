@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import externalLink from "../../assets/external-link.svg";
-import ScrollAnimation from "react-animate-on-scroll";
+import { Flip } from "react-awesome-reveal";
 
 const folderIcon = (
   <svg
@@ -30,15 +30,15 @@ const projects = [
     tech: ["ReactJs", "Laravel"],
     link: "https://www.weareappointments.com"
   },
-   {
+  {
     title: "Gobbler.ai",
     description: [
-        "Engineered AI-powered features that generate high-quality videos and images from user-provided text using OpenAI and stability-based APIs.",
-    "Integrated social media automation allowing users to directly publish generated content on Facebook and YouTube.",
-    "Built intuitive UI components in React.js for video preview, customization, and publishing workflows.",
-    "Managed API orchestration and secure media handling on the backend using Laravel.",
+      "Engineered AI-powered features that generate high-quality videos and images from user-provided text using OpenAI and stability-based APIs.",
+      "Integrated social media automation allowing users to directly publish generated content on Facebook and YouTube.",
+      "Built intuitive UI components in React.js for video preview, customization, and publishing workflows.",
+      "Managed API orchestration and secure media handling on the backend using Laravel.",
     ],
-    tech: ["ReactJs", "Laravel", "OpenAI","YouTube API", "Facebook Graph API"],
+    tech: ["ReactJs", "Laravel", "OpenAI", "YouTube API", "Facebook Graph API"],
     link: "https://www.gobbler.ai"
   },
   {
@@ -102,7 +102,7 @@ const projects = [
       "Implemented client-side routing and responsive design, improving user engagement.",
       "Integrated with backend APIs to dynamically fetch and display job listings."
     ],
-    tech: ["ReactJs","laravel"],
+    tech: ["ReactJs", "Laravel"],
     link: "https://www.clearsource.com"
   }
 ];
@@ -113,7 +113,7 @@ export function Project() {
       <h2>💻 My Projects</h2>
       <div className="projects">
         {projects.map((project, index) => (
-          <ScrollAnimation key={index} animateIn="flipInX">
+          <Flip key={index} direction="horizontal" triggerOnce>
             <div className="project">
               <header>
                 {folderIcon}
@@ -128,7 +128,7 @@ export function Project() {
               <div className="body">
                 <h3>{project.title}</h3>
                 <p>
-                  {project.date}
+                  {project.date && <strong>{project.date}</strong>}
                   <br />
                   {project.description.map((line, i) => (
                     <span key={i}>
@@ -146,7 +146,7 @@ export function Project() {
                 </ul>
               </footer>
             </div>
-          </ScrollAnimation>
+          </Flip>
         ))}
       </div>
     </Container>
