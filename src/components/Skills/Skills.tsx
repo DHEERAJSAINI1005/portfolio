@@ -1,6 +1,7 @@
 import { Container } from "./styles";
 import reactIcon from "../../assets/react-icon.svg";
 import muiIcon from "../../assets/mui.png";
+import typescriptIcon from "../../assets/typescript.png";
 import tailwindIcon from "../../assets/tailwind.svg";
 import bootstrapIcon from "../../assets/bootstrap-icon.svg";
 import nodeIcon from "../../assets/node.png";
@@ -13,6 +14,7 @@ import gitIcon from "../../assets/git.png";
 
 const skills = [
   { name: "React Js", icon: reactIcon },
+  { name: "TypeScript", icon: typescriptIcon },
   { name: "Material-UI", icon: muiIcon },
   { name: "Tailwind CSS", icon: tailwindIcon },
   { name: "Bootstrap", icon: bootstrapIcon },
